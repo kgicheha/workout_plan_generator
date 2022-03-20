@@ -1,1 +1,1 @@
-# workout_plan_generator
+# workoutplan_generator
