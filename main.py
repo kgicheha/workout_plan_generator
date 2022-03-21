@@ -92,42 +92,42 @@ if user_location == 0:
         print ('\033[39m')
         print("Sets and reps: " + Fore.LIGHTYELLOW_EX + "3 sets, 15 reps each." )
         print ('\033[39m')
-        print("Break in between each exercise: " + Fore.LIGHTYELLOW_EX + "1 minute")
+        print("Break in between each set: " + Fore.LIGHTYELLOW_EX + "30 seconds")
         print ('\033[39m')
     elif workout_time >= 45 and workout_time < 60:
         print("Warm up: " + Fore.LIGHTYELLOW_EX + "20 minutes jumprope. ")
         print ('\033[39m')
         print("Sets and reps: " + Fore.LIGHTYELLOW_EX + "4 sets, 15 reps each. ")
         print ('\033[39m')
-        print("Break in between each exercise: " + Fore.LIGHTYELLOW_EX + "2 minute")
+        print("Break in between each set: " + Fore.LIGHTYELLOW_EX + "1 minute")
         print ('\033[39m')
     else :
         print("Warm up: " + Fore.LIGHTYELLOW_EX + "20 minutes jumprope.")
         print ('\033[39m')
         print("Sets and reps: " + Fore.LIGHTYELLOW_EX + " 5 sets, 20 reps each.")
         print ('\033[39m')
-        print("Break in between each exercise: " + Fore.LIGHTYELLOW_EX + "2 minute")
+        print("Break in between each set: " + Fore.LIGHTYELLOW_EX + "2 minutes")
         print ('\033[39m')
 else:
-    if workout_time <= 45:
+    if workout_time < 45:
         print("Warm up: " + Fore.LIGHTYELLOW_EX + "15 minutes treadmill.")
         print ('\033[39m')
         print("Sets and reps: " + Fore.LIGHTYELLOW_EX + "3 sets, 15 reps.")
         print ('\033[39m')
-        print("Break in between each exercise: " + Fore.LIGHTYELLOW_EX + "1 minute")
+        print("Break in between each set: " + Fore.LIGHTRED_EX + "30 seconds")
         print ('\033[39m')
     elif workout_time >= 45 and workout_time < 60:
         print("Warm up: " + Fore.LIGHTYELLOW_EX + "20 minutes jumprope.")
         print ('\033[39m')
         print("Sets and reps: " + Fore.LIGHTYELLOW_EX + " 4 sets, 15 reps each.")
         print ('\033[39m')
-        print("Break in between each exercise: " + Fore.LIGHTYELLOW_EX + "2 minute")
+        print("Break in between each set: " + Fore.LIGHTRED_EX + "1 minute")
         print ('\033[39m')
     else:
         print("Warm up: " + Fore.LIGHTYELLOW_EX + "20 minutes treadmill.")
         print ('\033[39m')
         print("Sets and reps: " + Fore.LIGHTYELLOW_EX + "3 sets, 20 reps.")
         print ('\033[39m')
-        print("Break in between each exercise: " + Fore.LIGHTYELLOW_EX + "2 minute")
+        print("Break in between each set: " + Fore.LIGHTRED_EX + "2 minutes")
 
 
