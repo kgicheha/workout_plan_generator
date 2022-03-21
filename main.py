@@ -1,40 +1,9 @@
+from workoutplan import combined_home_workouts, combined_gym_workouts, quotes
 import random
+import colorama
+from colorama import Fore
 
 
-# ARRAY OF WORKOUT PLANS
-
-#chest & arms
-home_chest_workout = ["Regular Push Ups", "Incline Push Ups", "Decline Push Ups", "Wide Push Up", "Narrrow Push Ups" "Diamond Push Ups", "Shoulder Taps"]
-gym_chest_workout = ["Flat Bench Press", "Inclined Press", "Decline Press", "Dumbell Press", "Chest Dips"]
-
-# abs
-home_abs_workout = ["Sit Ups", "Crunches", "Knee to Elbow", "Leg Raises", "Elbow Plank", "Heel Touches", "Mountain Climbers"]
-gym_abs_workout = ["Hanging Leg Cirles", "Hanging Bicyles", "Hanging side-to-side Knees", "Mountain Climbers", "Abs Roll with Side Rotation"]
-
-# back
-home_back_workout = ["Elbow Planks", "Superman", "Wide Grip Push Ups"]
-gym_back_workout = ["Bent over Dumbbell Row", "Reverse Dumbbell Fly", "Deadlift", "Pull Up", "Chest Supported Dumbbell Row", "Lat Pulldown"]
-
-# legs
-home_leg_workout = ["Chair Dips", "Leg Raises", "Mountain Climbers", "Knees Pull-Ins", "Squats", "Side Leg Swings", "Forward Leg Swings"]
-gym_leg_workout = ["Leg Press", "Walking Lunges with Dumbbells", "Squats with Weight Bar", "Hamstring Curls", "Leg Extensions", "Bulgarian Split Squats"]
-
-
-# full body
-
-home_full_workout = ["Jumping Jacks", "Mountain Climbers", "Lunges", "Squats", "Shoulder Taps", "Push Ups", "Burpees"]
-gym_full_workout = ["Jumping Jacks", "Chest Press with Dumbbell", "Burpees", "Mountain Climbers", "Squat", "Walking Lunges with Dumbbells"]
-
-
-# motivational quotes
-
-quotes = ["Of course it's hard. It's supposed to be hard. If it were easy, everybody would do it. Hard is what makes it great!" ,
-            "Your body can stand almost anything. It’s your mind that you have to convince!", 
-            "Hustle for that muscle!", "It comes down to one simple thing: how bad do you want it?", 
-            "Making excuses burns zero calories per hour!", 
-            "Obstacles can’t stop you. Problems can’t stop you. People can’t stop you. Only you can stop you!",
-            "Exercise is like telling your body “you’re gonna hate me for this, but you’ll thank me later!",
-            "The pain you feel today, will be the strength you feel tomorrow!"]
 
 # USER INPUT
 
@@ -62,36 +31,54 @@ while workout_time < 30:
 
 #MOTIVATIONAL QUOTE
 
-print("Quote of the day: "+ random.choice(quotes))
+print("QUOTE OF THE DAY: " + Fore.GREEN + random.choice(quotes))
+
+#removes the color that was set prior to this line. Resets the color back to default
+print ('\033[39m')
 
 
 #WORKOUT PLAN
 
-#at home chest & arm workout plan
-if user_workout_choice == 0 and user_location == 0:
-    print("Today's Workout Plan: " + random.choice(home_chest_workout) + ", " + random.choice(home_chest_workout) + " & " + random.choice(home_chest_workout))
-    
-#gym chest & arm workout plan
+#create function that generates workout routine
 
-#at home Abs workout plan
-
-#gym abs workout plan
 
 #at home 
+if user_location == 0:
+    #at home 
+    if user_workout_choice == 0:
+        # chest & arm workout plan
+        print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(combined_home_workouts[0]) + ", " + random.choice(combined_home_workouts[0]) + " & " + random.choice(combined_home_workouts[0]))
+#     elif user_workout_choice == 1:
+#         # Abs workout plan
+#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(home_abs_workout) + ", " + random.choice(home_abs_workout) + " & " + random.choice(home_abs_workout))
+#     elif user_workout_choice == 2:
+#         # Back workout plan
+#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + + random.choice(home_back_workout) + ", " + random.choice(home_back_workout) + " & " + random.choice(home_back_workout))
+#     elif user_workout_choice == 3:
+#         # Legs workout plan
+#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(home_leg_workout) + ", " + random.choice(home_leg_workout) + " & " + random.choice(home_leg_workout))
+#     else:
+#         # Full body workout plan
+#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(home_full_workout) + ", " + random.choice(home_full_workout) + " & " + random.choice(home_full_workout))
+# else:
+#     #at the gym
+#     if user_workout_choice == 0:
+#         # chest & arm workout plan
+#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(gym_chest_workout) + ", " + random.choice(gym_chest_workout) + " & " + random.choice(gym_chest_workout))
+#     elif user_workout_choice == 1:
+#         # Abs workout plan
+#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(gym_abs_workout) + ", " + random.choice(gym_abs_workout) + " & " + random.choice(gym_abs_workout))
+#     elif user_workout_choice == 2:
+#         # Back workout plan
+#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(gym_back_workout) + ", " + random.choice(gym_back_workout) + " & " + random.choice(gym_back_workout))
+#     elif user_workout_choice == 3:
+#         # Legs workout plan
+#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(gym_leg_workout) + ", " + random.choice(gym_leg_workout) + " & " + random.choice(gym_leg_workout))
+#     else:
+#         # Full body workout plan
+#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(gym_full_workout) + ", " + random.choice(gym_full_workout) + " & " + random.choice(gym_full_workout))
 
-#gym
-
-#at home
-
-#gym
-
-#at home
-
-#gym
-
-#at home
-
-#gym
+# print ('\033[39m')
 
 #WORKOUT BREAKDOWN
 
@@ -99,13 +86,48 @@ if user_workout_choice == 0 and user_location == 0:
 # if workout is at the gym -- treadmill as warm up
 # the more workout time, more minutes on warmup, and more sets and reps
 
-if user_location == 0 and workout_time <= 45:
-    print(f"Warm up: 15 minutes jumprope. \n Sets and reps: 3 sets, 15 reps each. \n Break in between each exercise: 1 minute")
-elif user_location == 0 and workout_time > 45:
-    print("Warm up: 20 minutes jumprope. \n Sets and reps: 5 sets, 20 reps each. \n Break in between each exercise: 2 minute")
-elif user_location == 1 and workout_time <= 45:
-  print("Warm up: 15 minutes treadmill. \n Sets and reps: 3 sets, 15 reps. \n Break in between each exercise: 1 minute")
+if user_location == 0:
+    if workout_time < 45:
+        print("Warm up: " + Fore.LIGHTYELLOW_EX + "15 minutes jumprope. ")
+        print ('\033[39m')
+        print("Sets and reps: " + Fore.LIGHTYELLOW_EX + "3 sets, 15 reps each." )
+        print ('\033[39m')
+        print("Break in between each exercise: " + Fore.LIGHTYELLOW_EX + "1 minute")
+        print ('\033[39m')
+    elif workout_time >= 45 and workout_time < 60:
+        print("Warm up: " + Fore.LIGHTYELLOW_EX + "20 minutes jumprope. ")
+        print ('\033[39m')
+        print("Sets and reps: " + Fore.LIGHTYELLOW_EX + "4 sets, 15 reps each. ")
+        print ('\033[39m')
+        print("Break in between each exercise: " + Fore.LIGHTYELLOW_EX + "2 minute")
+        print ('\033[39m')
+    else :
+        print("Warm up: " + Fore.LIGHTYELLOW_EX + "20 minutes jumprope.")
+        print ('\033[39m')
+        print("Sets and reps: " + Fore.LIGHTYELLOW_EX + " 5 sets, 20 reps each.")
+        print ('\033[39m')
+        print("Break in between each exercise: " + Fore.LIGHTYELLOW_EX + "2 minute")
+        print ('\033[39m')
 else:
-    print("Warm up: 20 minutes treadmill. \n Sets and reps: 3 sets, 20 reps. \n Break in between each exercise: 2 minute")
+    if workout_time <= 45:
+        print("Warm up: " + Fore.LIGHTYELLOW_EX + "15 minutes treadmill.")
+        print ('\033[39m')
+        print("Sets and reps: " + Fore.LIGHTYELLOW_EX + "3 sets, 15 reps.")
+        print ('\033[39m')
+        print("Break in between each exercise: " + Fore.LIGHTYELLOW_EX + "1 minute")
+        print ('\033[39m')
+    elif workout_time >= 45 and workout_time < 60:
+        print("Warm up: " + Fore.LIGHTYELLOW_EX + "20 minutes jumprope.")
+        print ('\033[39m')
+        print("Sets and reps: " + Fore.LIGHTYELLOW_EX + " 4 sets, 15 reps each.")
+        print ('\033[39m')
+        print("Break in between each exercise: " + Fore.LIGHTYELLOW_EX + "2 minute")
+        print ('\033[39m')
+    else:
+        print("Warm up: " + Fore.LIGHTYELLOW_EX + "20 minutes treadmill.")
+        print ('\033[39m')
+        print("Sets and reps: " + Fore.LIGHTYELLOW_EX + "3 sets, 20 reps.")
+        print ('\033[39m')
+        print("Break in between each exercise: " + Fore.LIGHTYELLOW_EX + "2 minute")
 
 
