@@ -1,4 +1,4 @@
-from workoutplan import combined_home_workouts, combined_gym_workouts, quotes
+from workoutplan import quotes, home_chest_workout, gym_chest_workout, home_abs_workout, gym_abs_workout, home_back_workout, gym_back_workout, home_leg_workout, gym_leg_workout, home_full_workout, gym_full_workout 
 import random
 import colorama
 from colorama import Fore
@@ -31,7 +31,7 @@ while workout_time < 30:
 
 #MOTIVATIONAL QUOTE
 
-print("QUOTE OF THE DAY: " + Fore.GREEN + random.choice(quotes))
+print("QUOTE OF THE DAY: " + Fore.GREEN + random.choice(quotes).capitalize())
 
 #removes the color that was set prior to this line. Resets the color back to default
 print ('\033[39m')
@@ -47,38 +47,38 @@ if user_location == 0:
     #at home 
     if user_workout_choice == 0:
         # chest & arm workout plan
-        print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(combined_home_workouts[0]) + ", " + random.choice(combined_home_workouts[0]) + " & " + random.choice(combined_home_workouts[0]))
-#     elif user_workout_choice == 1:
-#         # Abs workout plan
-#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(home_abs_workout) + ", " + random.choice(home_abs_workout) + " & " + random.choice(home_abs_workout))
-#     elif user_workout_choice == 2:
-#         # Back workout plan
-#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + + random.choice(home_back_workout) + ", " + random.choice(home_back_workout) + " & " + random.choice(home_back_workout))
-#     elif user_workout_choice == 3:
-#         # Legs workout plan
-#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(home_leg_workout) + ", " + random.choice(home_leg_workout) + " & " + random.choice(home_leg_workout))
-#     else:
-#         # Full body workout plan
-#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(home_full_workout) + ", " + random.choice(home_full_workout) + " & " + random.choice(home_full_workout))
-# else:
-#     #at the gym
-#     if user_workout_choice == 0:
-#         # chest & arm workout plan
-#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(gym_chest_workout) + ", " + random.choice(gym_chest_workout) + " & " + random.choice(gym_chest_workout))
-#     elif user_workout_choice == 1:
-#         # Abs workout plan
-#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(gym_abs_workout) + ", " + random.choice(gym_abs_workout) + " & " + random.choice(gym_abs_workout))
-#     elif user_workout_choice == 2:
-#         # Back workout plan
-#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(gym_back_workout) + ", " + random.choice(gym_back_workout) + " & " + random.choice(gym_back_workout))
-#     elif user_workout_choice == 3:
-#         # Legs workout plan
-#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(gym_leg_workout) + ", " + random.choice(gym_leg_workout) + " & " + random.choice(gym_leg_workout))
-#     else:
-#         # Full body workout plan
-#         print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(gym_full_workout) + ", " + random.choice(gym_full_workout) + " & " + random.choice(gym_full_workout))
+        print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(home_chest_workout) + ", " + random.choice(home_chest_workout) + ", & " + random.choice(home_chest_workout))
+    elif user_workout_choice == 1:
+        # Abs workout plan
+        print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(home_abs_workout) + ", " + random.choice(home_abs_workout) + ", & " + random.choice(home_abs_workout))
+    elif user_workout_choice == 2:
+        # Back workout plan
+        print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(home_back_workout) + ", " + random.choice(home_back_workout) + ", & " + random.choice(home_back_workout))
+    elif user_workout_choice == 3:
+        # Legs workout plan
+        print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(home_leg_workout) + ", " + random.choice(home_leg_workout) + ", & " + random.choice(home_leg_workout))
+    else:
+        # Full body workout plan
+        print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(home_full_workout) + ", " + random.choice(home_full_workout) + ", & " + random.choice(home_full_workout))
+else:
+    #at the gym
+    if user_workout_choice == 0:
+        # chest & arm workout plan
+        print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(gym_chest_workout) + ", " + random.choice(gym_chest_workout) + ", & " + random.choice(gym_chest_workout))
+    elif user_workout_choice == 1:
+        # Abs workout plan
+        print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(gym_abs_workout) + ", " + random.choice(gym_abs_workout) + ", & " + random.choice(gym_abs_workout))
+    elif user_workout_choice == 2:
+        # Back workout plan
+        print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(gym_back_workout) + ", " + random.choice(gym_back_workout) + ", & " + random.choice(gym_back_workout))
+    elif user_workout_choice == 3:
+        # Legs workout plan
+        print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(gym_leg_workout) + ", " + random.choice(gym_leg_workout) + ", & " + random.choice(gym_leg_workout))
+    else:
+        # Full body workout plan
+        print("TODAY'S WORKOUT PLAN: " + Fore.LIGHTBLUE_EX + random.choice(gym_full_workout) + ", " + random.choice(gym_full_workout) + ", & " + random.choice(gym_full_workout))
 
-# print ('\033[39m')
+print ('\033[39m')
 
 #WORKOUT BREAKDOWN
 

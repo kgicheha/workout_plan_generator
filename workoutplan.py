@@ -2,7 +2,7 @@ import random
 # ARRAY OF WORKOUT PLANS
 
 #chest & arms
-home_chest_workout = ["Regular Push Ups", "Incline Push Ups", "Decline Push Ups", "Wide Push Up", "Narrrow Push Ups" "Diamond Push Ups", "Shoulder Taps"]
+home_chest_workout = ["Regular Push Ups", "Incline Push Ups", "Decline Push Ups", "Wide Push Up", "Narrrow Push Ups", "Diamond Push Ups", "Shoulder Taps"]
 gym_chest_workout = ["Flat Bench Press", "Inclined Press", "Decline Press", "Dumbell Press", "Chest Dips"]
 
 # abs
@@ -42,7 +42,8 @@ combined_home_workouts =[home_chest_workout], [home_abs_workout], [home_back_wor
 combined_gym_workouts = [gym_chest_workout, gym_abs_workout, gym_back_workout, gym_full_workout]
 
 
-print(combined_gym_workouts[0][0])
-print(random.choice(combined_gym_workouts[0]))
+# print(combined_gym_workouts[0][0])
+# print(random.choice(combined_gym_workouts[0]))
 
 
+#save the random choices to an empty array then use it to showcase the result in the main page
